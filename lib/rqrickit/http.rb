@@ -15,7 +15,7 @@ module Rqrickit
         @website = ERB::Util.url_encode(website)
       end
       def get_vcard_qr_code
-        notes = "Created by Contactify"
+        notes = "Created by Rqrickit"
         "https://qrickit.com/api/qr.php?d=BEGIN%3aVCARD%0d%0aVERSION%3a3.0%0d%0aN%3a#{@last_name}%3b#{@first_name}%0d%0aORG%3a#{@company_name}%0d%0aTITLE%3a#{@job_position}%0d%0aEMAIL%3a#{@email}%0d%0aTEL%3bTYPE%3dCELL%3a#{@phone}%0d%0aTEL%3bTYPE%3dWORK%2cVOICE%3a%0d%0aNOTE%3a#{notes}%0d%0aURL%3a#{@website}%0d%0aADR%3a%3b%3b%0d%0aEND%3aVCARD%0A&addtext=&txtcolor=000000&fgdcolor=000000&bgdcolor=FFFFFF&qrsize=200"
       end
     end
